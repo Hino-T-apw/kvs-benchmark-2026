@@ -1,0 +1,11 @@
+services:
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+
+  memcached:
+    image: memcached:1.6
+    command: ["memcached", "-m", "256", "-p", "11212"]
+    ports:
+      - "11212:11212"
